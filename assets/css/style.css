@@ -9,6 +9,10 @@ body {
         sans-serif;
 }
 
+p {
+    line-height: 22px;
+}
+
 header {
     display: flex;
     margin: 0 auto;
@@ -50,7 +54,9 @@ header {
 
 .salutation,
 .name,
-.persona_title {
+.persona_title,
+.title_small_text,
+.title_large_text {
     display: block;
 }
 
@@ -105,4 +111,68 @@ header {
 .header_right_section img {
     max-width: 100%;
     object-fit: cover;
+}
+
+/*-------------- ABOUT ---------------*/
+
+.about_wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.about {
+    display: flex;
+    margin: 10em 8em;
+}
+
+.my_info {
+    padding-top: 4em;
+    padding-left: 5em;
+    padding-right: 1em;
+}
+
+.title_small_text {
+    font-weight: bold;
+}
+
+.title_large_text {
+    font-size: 38px;
+    font-weight: bold;
+    position: relative;
+}
+
+.title_large_text::after {
+    content: "";
+    width: 100px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    position: absolute;
+    background: #fff102;
+}
+
+.my_info p {
+    margin-bottom: 1.75em;
+    text-align: justify;
+}
+
+.my_img {
+    position: relative;
+}
+
+.my_img img {
+    width: 400px;
+}
+
+.my_img::before {
+    content: "";
+    width: 400px;
+    height: 400px;
+    background-color: #212121;
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    z-index: -1;
+    border: 1px solid #000;
 }
