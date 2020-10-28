@@ -9,11 +9,62 @@ body {
         sans-serif;
 }
 
-h1 {
+header {
+    max-width: 1440px;
+    min-height: 650px;
+    margin: 0 auto;
+    display: flex;
+    text-transform: uppercase;
 }
 
-h2 {
+.header_left_section {
+    background: #212121;
+    background-image: url("../images/bg_pattern.png");
+    background-repeat: no-repeat;
+    background-position: -50px -50px;
+    width: 37%;
+    text-align: center;
+    color: #fff;
+    position: relative;
 }
 
-h3 {
+.title {
+    font-size: 1.75rem;
+}
+
+.floating_text {
+    position: absolute;
+    width: 165%;
+    bottom: 5em;
+    left: 5em;
+    text-align: left;
+}
+
+.salutation,
+.name,
+.persona_title {
+    display: block;
+}
+
+.salutation {
+    font-size: 2rem;
+}
+
+.name {
+    font-size: clamp(4rem, 7vw, 5rem);
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+.personal_title {
+    font-size: 18px;
+    background-color: #fff102;
+    border-radius: 3px;
+    color: #000;
+    padding: 0.5em 1.5em;
+}
+
+.header_right_section {
+    width: 63%;
+    background: #aaa;
 }
