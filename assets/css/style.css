@@ -10,34 +10,42 @@ body {
 }
 
 header {
+    display: flex;
+    margin: 0 auto;
     max-width: 1440px;
     min-height: 650px;
-    margin: 0 auto;
-    display: flex;
     text-transform: uppercase;
 }
 
 .header_left_section {
-    background: #212121;
-    background-image: url("../images/bg_pattern.png");
-    background-repeat: no-repeat;
-    background-position: -50px -50px;
     width: 37%;
-    text-align: center;
     color: #fff;
     position: relative;
+    text-align: center;
+    background: #212121;
+    background-repeat: no-repeat;
+    background-position: -50px -50px;
+    background-image: url("../images/bg_pattern.png");
+}
+
+.title,
+.main_nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
 }
 
 .title {
     font-size: 1.75rem;
+    padding-left: 1em;
 }
 
 .floating_text {
-    position: absolute;
+    left: 7em;
+    bottom: 7em;
     width: 165%;
-    bottom: 5em;
-    left: 5em;
     text-align: left;
+    position: absolute;
 }
 
 .salutation,
@@ -51,20 +59,50 @@ header {
 }
 
 .name {
-    font-size: clamp(4rem, 7vw, 5rem);
-    margin-bottom: 0.3em;
     font-weight: bold;
+    margin-bottom: 0.3em;
+    font-size: clamp(4rem, 7vw, 5rem);
 }
 
 .personal_title {
-    font-size: 18px;
-    background-color: #fff102;
-    border-radius: 3px;
     color: #000;
+    font-size: 18px;
+    border-radius: 3px;
     padding: 0.5em 1.5em;
+    background-color: #fff102;
 }
 
 .header_right_section {
     width: 63%;
     background: #aaa;
+    background-size: 150%;
+    background-position: -15em 0;
+    background-repeat: no-repeat;
+    background-image: url("../images/adi.JPG");
+}
+
+.main_nav {
+    gap: 2.75em;
+    padding-right: 3em;
+    background: #5d5d5d;
+    justify-content: flex-end;
+}
+
+.main_nav a {
+    color: #fff;
+    padding: 0.5em 0;
+    text-decoration: none;
+    transition: all ease 0.2s;
+    border-bottom: 3px solid transparent;
+}
+
+.main_nav a:hover,
+.main_nav a:focus,
+.active {
+    border-bottom: 3px solid #fff102;
+}
+
+.header_right_section img {
+    max-width: 100%;
+    object-fit: cover;
 }
