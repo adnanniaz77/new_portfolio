@@ -9,33 +9,36 @@
 </head>
 
 <body>
-    <header>
-        <div class="header_left_section">
-            <span class="title">Portfolio</span>
-            <div class="floating_text">
-                <span class="salutation">my name is </span>
-                <span class="name">adnan niaz</span>
-                <span class="personal_title">i'm a full-stack developer</span>
+    <div class="large_margin_wrapper">
+        <header>
+            <div class="header_left_section">
+                <span class="title">Portfolio</span>
+                <div class="floating_text">
+                    <span class="salutation">my name is </span>
+                    <span class="name">adnan niaz</span>
+                    <span class="tagline">i'm a full-stack web developer + ui designer/developer</span>
+                    <button class="download_btn">download my cv</button>
+                </div>
             </div>
-        </div>
-        <div class="header_right_section">
-            <nav class="main_nav">
-                <a href="#">home</a>
-                <a href="#">about</a>
-                <a href="#">work</a>
-                <a href="#">contact</a>
-            </nav>
-        </div>
-    </header>
+            <div class="header_right_section">
+                <nav class="main_nav">
+                    <a href="#">home</a>
+                    <a href="#">about</a>
+                    <a href="#">work</a>
+                    <a href="#">contact</a>
+                </nav>
+            </div>
+        </header>
+    </div>
 
     <!-- about -->
-    <section class="about_wrapper">
+    <section class="large_margin_wrapper">
         <div class="about">
             <div class="my_img">
                 <img src="./assets/images/adi2.jpg" alt="myself">
             </div>
             <div class="my_info">
-                <span class="title_small_text">who am i</span>
+                <span class="title_small_text">about myself</span>
                 <span class="title_large_text">Hello</span>
                 <p class="my_info_detail">
                     I am a full-stack developer and contribute to both sides of web development process. Most of my work
@@ -48,9 +51,74 @@
                     at
                     enim fugit repudiandae voluptatem est quae.
                 </p>
+                <h3>Tech i use for development</h3>
+                <ul class="tech">
+                    <li>
+                        <img src="./assets/images/html5.png" alt="">
+                        <span class="html tech_title">html</span>
+                    </li>
+                    <li>
+                        <img src="./assets/images/css3.png" alt="">
+                        <span class="css tech_title">css</span>&nbsp;(sass )
+                    </li>
+                    <li>
+                        <img src="./assets/images/js.png" alt="">
+                        <span class="js tech_title">javascript</span> & jsx
+                    </li>
+                    <li>
+                        <img src="./assets/images/jquery.png" alt="">
+                        <span class="jquery tech_title">jquery</span>, bootstrap and materialized css
+                    </li>
+                    <li>
+                        <img src="./assets/images/react.png" alt="">
+                        <span class="react tech_title">react</span>
+                    </li>
+                    <li>
+                        <img src="./assets/images/node.png" alt="">
+                        <span class="node tech_title">node</span>&nbsp;(express.js, routers, server configuration)
+                    </li>
+                    <li>
+                        <img src="./assets/images/mongodb.png" alt="">
+                        <span class="node tech_title">mongodb </span>&nbsp;(crud and schema)
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
+
+    <!-- work -->
+    <section class="large_margin_wrapper">
+        <div class="projects">
+            <div class="section_title">
+                <div class="title_small_text">projects</div>
+                <div class="title_large_text">my work</div>
+            </div>
+            <nav class="project_nav">
+                <button class="project_nav_btn" href="#">all</button>
+                <button class="project_nav_btn" href="#">html, css</button>
+                <button class="project_nav_btn" href="#">js</button>
+                <button class="project_nav_btn" href="#">react</button>
+                <button class="project_nav_btn" href="#">full-stack</button>
+            </nav>
+            <div class="project_gallery">
+                <div class="project">
+                    <img src="" alt="">
+                    <div class="project_info">
+                        <span class="project_title">PopCorn Movies</span>
+                        <span class="project_tagline">html, css, js</span>
+                        <div class="projects_links">
+                            <a href="" class="project_link">github</a>
+                            <a href="" class="project_link">demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- javascript -->
+    <script src="./assets/js/app.js">
+    </script>
 </body>
 
 </html>
