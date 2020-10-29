@@ -133,13 +133,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #000; */
-    min-height: 90vh;
+    min-height: 900px;
 }
 
 .my_img,
 .my_info {
-    /* border: 1px solid #000; */
     width: 50%;
 }
 
@@ -200,23 +198,49 @@ header {
     text-align: justify;
 }
 
-/* my work */
+/* ----------- my work ----------- */
 
 .projects {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    min-height: 800px;
+    /* border: 1px solid #000; */
+    background: rgba(238, 238, 238, 0.507);
+    padding: 4em 0;
 }
 
 .project_nav {
     display: flex;
     text-transform: uppercase;
-    gap: 2em;
+    gap: 1em;
+    margin: 1em 0 4em 0;
 }
 
-.project_link_btn {
-    display: none;
+.project_nav_btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    border: 1px solid #d3d3d3;
+    color: #949393;
+    background: #ffffff;
+}
+
+.project_nav_btn:hover,
+.project_nav_btn:focus {
+    border: 1px solid #a7a7a7;
+    color: #212121;
+    outline: none;
+}
+
+.project_gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    max-width: 1440px;
+    flex-wrap: wrap;
 }
 
 .tech {
