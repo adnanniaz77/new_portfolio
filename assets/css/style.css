@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -5,15 +7,239 @@
 }
 
 body {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+    font-family: "Open Sans", sans-serif;
+    color: #212121;
 }
 
-h1 {
+p {
+    line-height: 1.6em;
 }
 
-h2 {
+header {
+    display: flex;
+    min-height: 800px;
+    text-transform: uppercase;
 }
 
-h3 {
+.header_left_section {
+    width: 37%;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    background: #212121;
+    background-repeat: no-repeat;
+    background-position: -50px -50px;
+    background-image: url("../images/bg_pattern.png");
+}
+
+.title,
+.main_nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.75rem;
+    padding-left: 1em;
+}
+
+.floating_text {
+    left: 7em;
+    bottom: 7em;
+    width: 165%;
+    text-align: left;
+    position: absolute;
+}
+
+.floating_text .tagline,
+.name {
+    text-shadow: 2px 2px 2px #000;
+}
+
+.salutation,
+.name,
+.persona_title,
+.title_small_text,
+.title_large_text,
+.tagline {
+    display: block;
+}
+
+.salutation {
+    font-size: 2rem;
+}
+
+.name {
+    font-weight: bold;
+    font-size: clamp(4rem, 7vw, 5rem);
+    margin: -0.1em 0;
+}
+
+.download_btn {
+    color: #000;
+    font-size: 18px;
+    border-radius: 3px;
+    padding: 0.5em 1.5em;
+    background-color: #fff102;
+    border: none;
+    margin-top: 1.5em;
+    cursor: pointer;
+}
+
+.header_right_section {
+    width: 63%;
+    background: #aaa;
+    background-size: 170%;
+    background-position: -15em 0;
+    background-repeat: no-repeat;
+    background-image: url("../images/adi.JPG");
+}
+
+.main_nav {
+    gap: 2.75em;
+    padding-right: 3em;
+    background: #5d5d5d;
+    justify-content: flex-end;
+}
+
+.main_nav a {
+    color: #fff;
+    padding: 0.5em 0;
+    text-decoration: none;
+    transition: all ease 0.2s;
+    border-bottom: 3px solid transparent;
+}
+
+.main_nav a:hover,
+.main_nav a:focus,
+.active {
+    border-bottom: 3px solid #fff102;
+}
+
+.header_right_section img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/*-------------- ABOUT ---------------*/
+
+.large_margin_wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+    min-height: 800px;
+}
+
+.my_img,
+.my_info {
+    /* border: 1px solid #000; */
+    width: 50%;
+}
+
+.my_img {
+    position: relative;
+    margin-left: 4.5em;
+    /* width: 40%; */
+}
+
+.my_img img {
+    width: clamp(400px, 18vw, 700px) !important;
+}
+
+.my_img::before {
+    content: "";
+    width: 400px;
+    height: 400px;
+    background-color: #212121;
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    z-index: -1;
+    /* border: 1px solid #000; */
+}
+
+.my_info {
+    /* padding-top: 4em; */
+    width: 70%;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.title_small_text {
+    font-weight: bold;
+}
+
+.title_large_text {
+    font-size: 38px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 0.75em;
+    text-transform: uppercase;
+}
+
+.title_large_text::after {
+    content: "";
+    width: 100px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    position: absolute;
+    background: #fff102;
+}
+
+.my_info p {
+    margin-bottom: 1.75em;
+    text-align: justify;
+}
+
+/* my work */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+}
+
+.project_nav {
+    display: flex;
+    text-transform: uppercase;
+    gap: 1em;
+}
+
+.project_nav_btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    background: #eee;
+}
+
+.tech {
+    list-style: none;
+    margin-top: 1em;
+}
+
+.tech li {
+    /* border: 1px solid #000; */
+    padding: 0.15em 0;
+    display: flex;
+    align-items: center;
+}
+
+.tech li img {
+}
+
+.tech_title {
+    margin-left: 1em;
 }
