@@ -185,11 +185,9 @@ header {
     left: -40px;
     top: -40px;
     z-index: -1;
-    /* border: 1px solid #000; */
 }
 
 .my_info {
-    /* padding-top: 4em; */
     width: 70%;
     padding-left: 2em;
     padding-right: 2em;
@@ -228,7 +226,6 @@ header {
 }
 
 .tech li {
-    /* border: 1px solid #000; */
     padding: 0.15em 0;
     align-items: center;
 }
@@ -243,7 +240,6 @@ header {
     flex-direction: column;
     align-items: center;
     min-height: 800px;
-    /* border: 1px solid #000; */
     background: rgba(238, 238, 238, 0.507);
     padding: 4em 0;
 }
@@ -320,6 +316,50 @@ header {
     animation: slideUp 0.3s linear;
 }
 
+.modal-backdrop {
+    border: 1px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.672);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.project_modal {
+    width: 90%;
+    max-width: 600px;
+    margin: 3em auto;
+    height: 100%;
+    max-height: 700px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #ddd;
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+}
+
+.close_btn:hover {
+    background: #bbb;
+}
+
 @keyframes slideDown {
     0% {
         top: -300px;
@@ -330,6 +370,24 @@ header {
 }
 
 @keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -300px;
+    }
+}
+
+@keyframes modalSlideDown {
+    0% {
+        top: -300px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes modalSlideUp {
     0% {
         top: 0;
     }
