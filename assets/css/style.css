@@ -15,16 +15,38 @@ p {
     line-height: 1.6em;
 }
 
-header {
+section {
+    min-height: 900px;
+}
+
+header,
+.main_nav,
+.about,
+.tech li,
+.projects,
+.project_nav,
+.project_gallery {
     display: flex;
+}
+
+header {
     min-height: 800px;
     text-transform: uppercase;
 }
 
+.header_left_section,
+.main_nav a {
+    color: #fff;
+}
+
+.header_left_section,
+.my_img,
+.title_large_text {
+    position: relative;
+}
+
 .header_left_section {
     width: 37%;
-    color: #fff;
-    position: relative;
     text-align: center;
     background: #212121;
     background-repeat: no-repeat;
@@ -35,7 +57,6 @@ header {
 .title,
 .main_nav {
     height: 70px;
-    display: flex;
     align-items: center;
 }
 
@@ -104,7 +125,6 @@ header {
 }
 
 .main_nav a {
-    color: #fff;
     padding: 0.5em 0;
     text-decoration: none;
     transition: all ease 0.2s;
@@ -124,13 +144,16 @@ header {
 
 /*-------------- ABOUT ---------------*/
 
+.project_gallery,
 .large_margin_wrapper {
     max-width: 1440px;
+}
+
+.large_margin_wrapper {
     margin: 0 auto;
 }
 
 .about {
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 900px;
@@ -142,13 +165,11 @@ header {
 }
 
 .my_img {
-    position: relative;
     margin-left: 4.5em;
-    /* width: 40%; */
 }
 
 .my_img img {
-    width: clamp(400px, 18vw, 700px) !important;
+    width: clamp(400px, 18vw, 600px) !important;
 }
 
 .my_img::before {
@@ -177,7 +198,6 @@ header {
 .title_large_text {
     font-size: 38px;
     font-weight: bold;
-    position: relative;
     margin-bottom: 0.75em;
     text-transform: uppercase;
 }
@@ -198,10 +218,24 @@ header {
     text-align: justify;
 }
 
+.tech {
+    list-style: none;
+    margin-top: 1em;
+}
+
+.tech li {
+    /* border: 1px solid #000; */
+    padding: 0.15em 0;
+    align-items: center;
+}
+
+.tech_title {
+    margin-left: 1em;
+}
+
 /* ----------- my work ----------- */
 
 .projects {
-    display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 800px;
@@ -211,7 +245,6 @@ header {
 }
 
 .project_nav {
-    display: flex;
     text-transform: uppercase;
     gap: 1em;
     margin: 1em 0 4em 0;
@@ -236,28 +269,84 @@ header {
 }
 
 .project_gallery {
-    display: flex;
     justify-content: center;
     gap: 2em;
-    max-width: 1440px;
     flex-wrap: wrap;
 }
 
-.tech {
-    list-style: none;
-    margin-top: 1em;
+/* --------- testimonials --------- */
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4em 0;
+    flex-wrap: wrap;
+    min-height: 800px;
+    gap: 2em;
+    padding: 2em 0;
 }
 
-.tech li {
-    /* border: 1px solid #000; */
-    padding: 0.15em 0;
+.testimonial_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.testimonial {
+    border: 1px solid #e4e4e4;
+    max-width: 450px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    padding: 2em 2em;
+    box-shadow: 5px 5px 15px #ececec;
 }
 
-.tech li img {
+.testimonial img {
+    width: 150px;
+    border-radius: 50%;
 }
 
-.tech_title {
-    margin-left: 1em;
+.testimonial_title {
+}
+
+.testimonial_name,
+.testimonial_title,
+.testimonial_contact {
+    color: #949393;
+}
+
+.testimonial_name {
+    margin: 1em 0;
+}
+
+.testimonial_description {
+    font-style: italic;
+    margin: 1em 0;
+    color: #666666;
+    text-align: justify;
+    line-height: 24px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.testimonial_description::before {
+    content: '"';
+    font-size: 5rem;
+    color: #fff102;
+    position: absolute;
+    top: 0;
+    left: -0.4em;
+}
+
+.testimonial_contact {
+}
+
+/* --------- footer --------- */
+footer {
+    background: #000;
+    color: #fff;
 }
