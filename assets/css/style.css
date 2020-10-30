@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     color: #212121;
@@ -274,6 +278,65 @@ header {
     flex-wrap: wrap;
 }
 
+.project {
+    position: relative;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.project img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    filter: grayscale(0.8);
+}
+
+.project_info {
+    background: #fff202c9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -320px;
+    transition: all ease 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project:hover > .project_info {
+    opacity: 1;
+    top: 0;
+    animation: slideDown 0.3s linear;
+    backdrop-filter: blur(2px);
+}
+
+.slideUp {
+    animation: slideUp 0.3s linear;
+}
+
+.slideDown {
+    animation: slideUp 0.3s linear;
+}
+
+@keyframes slideDown {
+    0% {
+        top: -300px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -300px;
+    }
+}
 /* --------- testimonials --------- */
 
 .testimonials {
@@ -330,6 +393,7 @@ header {
     text-align: justify;
     line-height: 24px;
     font-size: 0.9rem;
+    padding: 1.5em;
     position: relative;
 }
 
@@ -338,11 +402,12 @@ header {
     font-size: 5rem;
     color: #fff102;
     position: absolute;
-    top: 0;
-    left: -0.4em;
+    top: 0.2em;
+    left: 0;
 }
 
 .testimonial_contact {
+    font-size: 1.5rem;
 }
 
 /* --------- footer --------- */

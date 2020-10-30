@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="large_margin_wrapper">
+    <div class="large_margin_wrapper" id="home">
         <header>
             <div class="header_left_section">
                 <span class="title">Portfolio</span>
@@ -23,17 +23,18 @@
             </div>
             <div class="header_right_section">
                 <nav class="main_nav">
-                    <a href="#">home</a>
-                    <a href="#">about</a>
-                    <a href="#">work</a>
-                    <a href="#">contact</a>
+                    <a href="#home">home</a>
+                    <a href="#about">about</a>
+                    <a href="#work">work</a>
+                    <a href="#testimonials">testimonials</a>
+                    <a href="#contact">contact</a>
                 </nav>
             </div>
         </header>
     </div>
 
     <!-- about -->
-    <section class="large_margin_wrapper">
+    <section class="large_margin_wrapper" id="about">
         <div class="about">
             <div class="my_img">
                 <img src="./assets/images/adi2.jpg" alt="myself">
@@ -88,7 +89,7 @@
     </section>
 
     <!-- work -->
-    <section class="large_margin_wrapper">
+    <section class="large_margin_wrapper" id="work">
         <div class="projects">
             <div class="section_title">
                 <div class="title_small_text">projects</div>
@@ -104,7 +105,7 @@
             </nav>
             <div class="project_gallery">
                 <div class="project">
-                    <img src="https://picsum.photos/id/2/400/300" alt="">
+                    <img src="./assets/images/project_masks/popcorn-movies.jpg" alt="">
                     <div class="project_info">
                         <span class="project_title">PopCorn Movies</span>
                         <span class="project_tagline">html, css, js</span>
@@ -115,9 +116,9 @@
                     </div>
                 </div>
                 <div class="project">
-                    <img src="https://picsum.photos/id/1/400/300" alt="">
+                    <img src="./assets/images/project_masks/fire-gallery.jpg" alt="">
                     <div class="project_info">
-                        <span class="project_title">PopCorn Movies</span>
+                        <span class="project_title">Fire Gallery</span>
                         <span class="project_tagline">html, css, js</span>
                         <div class="projects_links">
                             <a href="" class="project_link"><i class="fa fa-github"></i>github</a>
@@ -126,9 +127,9 @@
                     </div>
                 </div>
                 <div class="project">
-                    <img src="https://picsum.photos/id/180/400/300" alt="">
+                    <img src="./assets/images/project_masks/movies-info.jpg" alt="">
                     <div class="project_info">
-                        <span class="project_title">PopCorn Movies</span>
+                        <span class="project_title">Movies Info</span>
                         <span class="project_tagline">html, css, js</span>
                         <div class="projects_links">
                             <a href="" class="project_link"><i class="fa fa-github"></i>github</a>
@@ -137,9 +138,9 @@
                     </div>
                 </div>
                 <div class="project">
-                    <img src="https://picsum.photos/id/119/400/300" alt="">
+                    <img src="./assets/images/project_masks/mern-todo.jpg" alt="">
                     <div class="project_info">
-                        <span class="project_title">PopCorn Movies</span>
+                        <span class="project_title">MERN To-do App</span>
                         <span class="project_tagline">html, css, js</span>
                         <div class="projects_links">
                             <a href="" class="project_link"><i class="fa fa-github"></i>github</a>
@@ -147,10 +148,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="project">
-                    <img src="https://picsum.photos/id/201/400/300" alt="">
+                <div class="project mini">
+                    <img src="./assets/images/project_masks/snake-game.jpg" alt="">
                     <div class="project_info">
-                        <span class="project_title">PopCorn Movies</span>
+                        <span class="project_title">Snake Game</span>
                         <span class="project_tagline">html, css, js</span>
                         <div class="projects_links">
                             <a href="" class="project_link"><i class="fa fa-github"></i>github</a>
@@ -158,8 +159,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="project">
-                    <img src="https://picsum.photos/id/2/400/300" alt="">
+                <div class="project mini">
+                    <img src="./assets/images/project_masks/portoflio-design.jpg" alt="">
+                    <div class="project_info">
+                        <span class="project_title">Portfolio Design</span>
+                        <span class="project_tagline">html, css, js</span>
+                        <div class="projects_links">
+                            <a href="" class="project_link"><i class="fa fa-github"></i>github</a>
+                            <a href="" class="project_link"><i class="fa fa-desktop"></i>demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project mini">
+                    <img src="./assets/images/coke-website" alt="">
                     <div class="project_info">
                         <span class="project_title">PopCorn Movies</span>
                         <span class="project_tagline">html, css, js</span>
@@ -174,7 +186,7 @@
     </section>
 
     <!-- testimonials -->
-    <section class="large_margin_wrapper">
+    <section class="large_margin_wrapper" id="testimonials">
         <div class="testimonials">
             <div class="section_title">
                 <div class="title_small_text">other's perception</div>
@@ -188,7 +200,8 @@
                     <p class="testimonial_description">Adnan is a great problem solver and a gifted programmer. His
                         problem solving skills and his adaptability around various skill sets is going to make him a
                         valuable asset to any team he’s assigned to.</p>
-                    <span class="testimonial_contact">abcde@msn.com</span>
+                    <a class="testimonial_contact" href="https://www.linkedin.com/in/thomas-smith-456796b7/"><i
+                            class="fa fa-github"></i></a>
                 </div>
                 <div class="testimonial">
                     <img src="./assets/images/lawrence.jpg" alt="">
@@ -201,7 +214,8 @@
                         with
                         the instructor, TAs, and fellow classmate.
                     </p>
-                    <span class="testimonial_contact">abcde@msn.com</span>
+                    <a class="testimonial_contact" href="https://www.linkedin.com/in/lawrence-sl-ng/"><i
+                            class="fa fa-github"></i></a>
                 </div>
                 <div class="testimonial">
                     <img src="./assets/images/mark.jpg" alt="">
@@ -211,7 +225,8 @@
                         building out impressive User Interfaces, his willingness to help his fellow peers, will be an
                         asset to any organization that is lucky enough to have him!
                     </p>
-                    <span class="testimonial_contact">abcde@msn.com</span>
+                    <a class="testimonial_contact" href="https://www.linkedin.com/in/mark-bui/"><i
+                            class="fa fa-github"></i></a>
                 </div>
             </div>
         </div>
@@ -230,8 +245,7 @@
     </footer>
 
     <!-- javascript -->
-    <script src="./assets/js/app.js">
-    </script>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
