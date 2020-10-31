@@ -9,3 +9,15 @@ document.querySelector('.modal-backdrop').addEventListener('click', (e) => {
         document.querySelector('#popcorn-movies').style.display = 'none'
     }
 })
+
+document.addEventListener('scroll', (e) => {
+    console.log(pageYOffset)
+    if(pageYOffset >= document.querySelector('header').offsetHeight) {
+        document.querySelector('.hidden_menu').style.transform = 'translateY(0)'
+    } else {
+        document.querySelector('.hidden_menu').style.transform = 'translateY(-200px)'
+        document.querySelector('.hidden_menu').style.position = 'fixed'
+        document.querySelector('.hidden_menu').style.top = '0'
+        document.querySelector('.hidden_menu').style.left = '0'
+    }
+})
