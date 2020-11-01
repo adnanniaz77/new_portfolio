@@ -11,7 +11,6 @@ document.querySelector('.modal-backdrop').addEventListener('click', (e) => {
 })
 
 document.addEventListener('scroll', (e) => {
-    console.log(pageYOffset)
     if(pageYOffset >= document.querySelector('header').offsetHeight) {
         document.querySelector('.hidden_menu').style.transform = 'translateY(0)'
     } else {

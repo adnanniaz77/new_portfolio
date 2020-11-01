@@ -34,11 +34,46 @@ header,
 }
 
 .hidden_menu {
-    /* display: none; */
-    transform: translateY(-200px);
+    width: 100%;
     transition: all ease 0.3s;
-    border: 1px solid red;
     z-index: 3;
+    background: #212121d3;
+    backdrop-filter: blur(8px);
+}
+
+.active {
+    color: #fff102;
+}
+
+.hidden_menu_nav {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0.75em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.hidden_menu_nav_title {
+    text-transform: uppercase;
+    color: #fff102;
+    font-size: 1.5rem;
+}
+
+.hidden_menu_nav a {
+    padding: 1em 1em;
+    padding-bottom: 0.4em;
+    color: #fff;
+    margin-left: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+}
+
+.hidden_menu_nav a:hover,
+.hidden_menu_nav a:focus {
+    border-bottom: 3px solid #fff102;
 }
 
 header {
@@ -87,7 +122,9 @@ header {
 
 .title {
     font-size: 1.75rem;
-    padding-left: 1em;
+    text-align: left;
+    display: flex;
+    padding-left: 1.5em;
 }
 
 .floating_text {
@@ -152,8 +189,12 @@ header {
 .main_nav a {
     padding: 0.5em 0;
     text-decoration: none;
-    transition: all ease 0.2s;
     border-bottom: 3px solid transparent;
+}
+
+.main_nav a,
+.hidden_menu_nav a {
+    transition: all ease 0.2s;
 }
 
 .main_nav a:hover,
@@ -298,14 +339,13 @@ header {
 .project {
     position: relative;
     overflow: hidden;
-    opacity: 0.8;
 }
 
 .project img {
     width: 400px;
     height: 300px;
     object-fit: cover;
-    filter: grayscale(0.8);
+    filter: grayscale(0.6);
 }
 
 .project_info {
