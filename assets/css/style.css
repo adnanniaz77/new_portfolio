@@ -39,6 +39,7 @@ header,
     z-index: 3;
     background: #212121d3;
     backdrop-filter: blur(8px);
+    display: none;
 }
 
 .active {

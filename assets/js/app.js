@@ -12,6 +12,7 @@ document.querySelector('.modal-backdrop').addEventListener('click', (e) => {
 
 document.addEventListener('scroll', (e) => {
     if(pageYOffset >= document.querySelector('header').offsetHeight) {
+        document.querySelector('.hidden_menu').style.display = 'initial'
         document.querySelector('.hidden_menu').style.transform = 'translateY(0)'
     } else {
         document.querySelector('.hidden_menu').style.transform = 'translateY(-200px)'
