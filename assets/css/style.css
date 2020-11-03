@@ -536,7 +536,7 @@ header {
 /* --------- contact --------- */
 
 .contact {
-    min-height: 800px;
+    min-height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -555,6 +555,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 2em 0;
 }
 
 .contact_info,
@@ -566,18 +567,20 @@ header {
 .contact_info {
     padding: 1em 3em;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .contact_info_row {
-    flex-direction: column;
-    width: 48%;
     display: flex;
-    background: #ffffff0e;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1.2em 0;
+    gap: 1em;
+    background: #ffffff0e;
     transition: all ease 0.2s;
+    position: relative;
 }
 
 .contact_info_row:hover,
@@ -587,16 +590,50 @@ header {
 
 .contact_info_row .fa {
     font-size: 2rem;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
 }
 
 .contact_info_text {
-    display: none;
+    font-size: 0.9rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.toolTip {
+    position: absolute;
+    top: 10%;
+    left: 50;
+    padding: 1em;
+    background: #212121c7;
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform ease 0.5s;
+    transform: translateX(-240px);
+}
+
+.contact_info_row a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.toolTip:active {
+    background: #212121;
+}
+
+.toolTip:hover {
+    border: 1px solid rgb(126, 126, 126);
+}
+
+.contact_info_row:hover > .toolTip {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .contact_form {
@@ -608,7 +645,6 @@ header {
     margin: 1em;
     text-transform: uppercase;
     background: #ffffff0e;
-    /* border: 1px solid #ffffff21; */
 }
 
 .form_double_fields {
@@ -625,7 +661,10 @@ header {
 
 .contact_form input {
     padding: 1em 0;
+    width: 100%;
     border: 1px solid #eee;
+    font-size: 1rem;
+    padding-left: 1em;
 }
 
 .contact_form textarea {
@@ -647,7 +686,7 @@ header {
 
 /* --------- footer --------- */
 footer {
-    background: #000;
+    background: #212121;
     color: #fff;
     max-width: 1440px;
     margin: 0 auto;

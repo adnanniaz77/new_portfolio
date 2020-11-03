@@ -263,19 +263,23 @@
                 <div class="contact_info">
                     <div class="contact_info_row">
                         <i class="fa fa-envelope"></i>
+                        <div class="toolTip" onclick="copyText()">Copy Email ID</div>
                         <span class="contact_info_text">adnan.niaz71@gmail.com</span>
                     </div>
                     <div class="contact_info_row">
+                        <i class="fa fa-phone"></i>
+                        <div class="toolTip" onclick="copyText()">Copy Phone Number</div>
+                        <span class="contact_info_text">1 (415) 802 8751</span>
+                    </div>
+                    <div class="contact_info_row">
                         <i class="fa fa-github"></i>
+                        <div class="toolTip" onclick="copyText()">Copy GitHub Link</div>
                         <span class="contact_info_text">https://github.com/adnanniaz77</span>
                     </div>
                     <div class="contact_info_row">
                         <i class="fa fa-linkedin"></i>
-                        <span class="contact_info_text">https://www.linkedin.com/in/adnanniaz77/</span>
-                    </div>
-                    <div class="contact_info_row">
-                        <i class="fa fa-phone"></i>
-                        <span class="contact_info_text">adnan.niaz71@gmail.com</span>
+                        <div class="toolTip" onclick="copyText('#linkedin')">Copy linkedIn Link</div>
+                        <span id="linkedin" class="contact_info_text">https://www.linkedin.com/in/adnanniaz77/</span>
                     </div>
                 </div>
                 <!-- contact form -->
@@ -308,7 +312,7 @@
 
     <!-- footer -->
     <footer>
-        footer
+        &copy;SaniStudio 2020 (Designed and created by Adi)
     </footer>
 
     <!-- javascript -->

@@ -21,3 +21,15 @@ document.addEventListener('scroll', (e) => {
         document.querySelector('.hidden_menu').style.left = '0'
     }
 })
+
+let toolTip = document.querySelectorAll('.toolTip')
+
+function copyText(element) {
+    var temp = $("<input>");
+    $("body").append(temp);
+
+    temp.val($(element).text()).select();
+    document.execCommand("copy");
+
+    temp.remove();
+}
