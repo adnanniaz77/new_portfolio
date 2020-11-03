@@ -111,13 +111,17 @@
                 <div class="title_large_text">my work</div>
             </div>
             <nav class="project_nav">
-                <button class="project_nav_btn" href="#">all</button>
-                <button class="project_nav_btn" href="#">front-end</button>
-                <button class="project_nav_btn" href="#">full-stack</button>
-                <button class="project_nav_btn" href="#">mini fun apps</button>
+                <button class="project_nav_btn active" data-name="all" onclick="filterSelection('all')">all</button>
+                <button class="project_nav_btn" data-name="front-end"
+                    onclick="filterSelection('front-end')">front-end</button>
+                <button class="project_nav_btn" data-name="full-stack"
+                    onclick="filterSelection('full-stack')">full-stack</button>
+                <button class="project_nav_btn" data-name="mini" onclick="filterSelection('mini')">mini fun
+                    apps</button>
             </nav>
             <div class="project_gallery">
-                <div class="project">
+                <!-- popcorn-movie -->
+                <div class="project all front-end">
                     <img src="./assets/images/project_masks/popcorn-movies.jpg" alt="">
                     <div class="project_info">
                         <span class="project_title">PopCorn Movies</span>
@@ -125,6 +129,7 @@
                     </div>
                 </div>
 
+                <!-- popcorn-movie modal -->
                 <div class="modal-backdrop" id="popcorn-movies">
                     <div class="project_modal">
                         <div class="close_btn"><i class="fa fa-times"></i></div>
@@ -135,7 +140,8 @@
                     </div>
                 </div>
 
-                <div class="project">
+                <!-- fire-gallery -->
+                <div class="project all front-end">
                     <img src="./assets/images/project_masks/fire-gallery.jpg" alt="">
                     <div class="project_info">
                         <span class="project_title">Fire Gallery</span>
@@ -146,7 +152,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="project">
+
+                <!-- movies-info -->
+                <div class="project all front-end">
                     <img src="./assets/images/project_masks/movies-info.jpg" alt="">
                     <div class="project_info">
                         <span class="project_title">Movies Info</span>
@@ -157,7 +165,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="project">
+
+                <!-- mern-todo -->
+                <div class="project all full-stack">
                     <img src="./assets/images/project_masks/mern-todo.jpg" alt="">
                     <div class="project_info">
                         <span class="project_title">MERN To-do App</span>
@@ -168,7 +178,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="project mini">
+
+                <!-- snake-game -->
+                <div class="project all mini">
                     <img src="./assets/images/project_masks/snake-game.jpg" alt="">
                     <div class="project_info">
                         <span class="project_title">Snake Game</span>
@@ -179,8 +191,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="project mini">
-                    <img src="./assets/images/project_masks/portoflio-design.jpg" alt="">
+
+                <!-- portfolio-design -->
+                <div class="project all mini">
+                    <img src="./assets/images/project_masks/portfolio-design.jpg" alt="">
                     <div class="project_info">
                         <span class="project_title">Portfolio Design</span>
                         <span class="project_tagline">html, css, js</span>
@@ -190,7 +204,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="project mini">
+
+                <!-- coke-website -->
+                <div class="project all mini">
                     <img src="./assets/images/project_masks/coke-website.jpg" alt="">
                     <div class="project_info">
                         <span class="project_title">PopCorn Movies</span>

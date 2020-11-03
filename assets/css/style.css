@@ -253,10 +253,23 @@ header {
     z-index: -1;
 }
 
+.active {
+    background: #fff102 !important;
+}
+
+.show {
+    display: initial;
+}
+
+.hide {
+    display: none;
+}
+
 .my_info {
     width: 70%;
     padding-left: 2em;
     padding-right: 2em;
+    display: initial;
 }
 
 .title_small_text {
@@ -343,11 +356,13 @@ header {
     justify-content: center;
     gap: 2em;
     flex-wrap: wrap;
+    transition: all ease 0.2;
 }
 
 .project {
     position: relative;
     overflow: hidden;
+    transition: all ease 0.2;
 }
 
 .project img {
@@ -608,13 +623,13 @@ header {
     position: absolute;
     top: 10%;
     left: 50;
-    padding: 1em;
+    padding: 0.5em 1em;
     background: #212121c7;
     backdrop-filter: blur(2px);
     opacity: 0;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: transform ease 0.5s;
+    transition: all ease 1s;
     transform: translateX(-240px);
 }
 
