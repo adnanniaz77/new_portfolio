@@ -279,32 +279,44 @@
                 <div class="contact_info">
                     <div class="contact_info_row">
                         <i class="fa fa-envelope"></i>
-                        <div class="toolTip" onclick="copyText()">Copy Email ID</div>
+                        <div class="toolTip" onclick="copyText('email')">Copy Email ID</div>
                         <span class="contact_info_text">adnan.niaz71@gmail.com</span>
+                        <input class="textToBeCopied" id="email" value="adnan.niaz71@gmail.com" />
                     </div>
                     <div class="contact_info_row">
                         <i class="fa fa-phone"></i>
-                        <div class="toolTip" onclick="copyText()">Copy Phone Number</div>
+                        <div class="toolTip" onclick="copyText('phone')">Copy Phone Number</div>
                         <span class="contact_info_text">1 (415) 802 8751</span>
+                        <input type="text" class="textToBeCopied" id="phone" value="1 (415) 802 8751" />
                     </div>
                     <div class="contact_info_row">
                         <i class="fa fa-github"></i>
-                        <div class="toolTip" onclick="copyText()">Copy GitHub Link</div>
+                        <div class="toolTip" onclick="copyText('githubLink')">Copy GitHub Link
+                        </div>
                         <span class="contact_info_text">https://github.com/adnanniaz77</span>
+                        <input type="text" class="textToBeCopied" id="githubLink"
+                            value="https://github.com/adnanniaz77" />
                     </div>
                     <div class="contact_info_row">
                         <i class="fa fa-linkedin"></i>
-                        <div class="toolTip" onclick="copyText('#linkedin')">Copy linkedIn Link</div>
+                        <div class="toolTip" onclick="copyText('linkedInLink')">Copy
+                            linkedIn Link</div>
                         <span id="linkedin" class="contact_info_text">https://www.linkedin.com/in/adnanniaz77/</span>
+                        <input type="text" class="textToBeCopied" id="linkedInLink"
+                            value="https://www.linkedin.com/in/adnanniaz77/" />
                     </div>
                 </div>
+
+                <!-- copy text alert -->
+                <div class="copyAlert">Copied to Clipboard</div>
+
                 <!-- contact form -->
                 <div class="contact_form">
                     <form>
                         <div class="form_double_fields">
                             <div class="form_row">
-                                <label for="first_name">First Name</label>
-                                <input type="text" name="first_name">
+                                <label for="first_name">First Name *</label>
+                                <input type="text" name="first_name" required>
                             </div>
                             <div class="form_row">
                                 <label for="first_name">Last Name</label>
@@ -312,12 +324,12 @@
                             </div>
                         </div>
                         <div class="form_row">
-                            <label for="first_name">Email</label>
-                            <input type="text" name="first_name">
+                            <label for="first_name">Email *</label>
+                            <input type="email" name="first_name" required>
                         </div>
                         <div class="form_row">
-                            <label for="first_name">Message</label>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <label for="first_name">Message *</label>
+                            <textarea name="" id="" cols="30" rows="10" required></textarea>
                         </div>
                         <input type="submit" class="submit" value="submit">
                     </form>

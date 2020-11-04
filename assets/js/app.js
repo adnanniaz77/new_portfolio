@@ -12,6 +12,7 @@ document.querySelector('.modal-backdrop').addEventListener('click', (e) => {
     }
 })
 
+// Show Floating Menu on Scroll
 document.addEventListener('scroll', (e) => {
     if(pageYOffset >= document.querySelector('header').offsetHeight) {
         document.querySelector('.hidden_menu').style.display = 'initial'
@@ -24,18 +25,45 @@ document.addEventListener('scroll', (e) => {
     }
 })
 
-let toolTip = document.querySelectorAll('.toolTip')
+// copy text to clipboard
+function copyText(target) {
+    const element = document.getElementById(target);
+    const text = element.value
+    
+    copyToClipBoard(text);
+    const alertText = document.querySelector('.copyAlert')
+    alertText.style.opacity = '1'
+    setTimeout(() => {
+        alertText.style.opacity = '0'
+    }, 1500)
+}
 
-// function copyText(element) {
-//     var temp = $("<input>");
-//     $("body").append(temp);
+// copyToClipBoard function
+function copyToClipBoard (text) {
+    console.log(text)
+    if (window.clipboardData && window.clipboardData.setData) {
+        // IE specific code path to prevent textarea being shown while dialog is visible.
+        return clipboardData.setData("Text", text); 
 
-//     temp.val($(element).text()).select();
-//     document.execCommand("copy");
+  } else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+    var textarea = document.createElement("textarea");
+    textarea.textContent = text;
+    textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
+    document.body.appendChild(textarea);
+    textarea.select();
 
-//     temp.remove();
-// }
+    try {
+      return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+    } catch (ex) {
+      console.warn("Copy to clipboard failed.", ex);
+      return false;
+    } finally {
+      document.body.removeChild(textarea);
+    }
+    }
+}
 
+// Gallery Filter
 function filterSelection(selector) {
     const filterBtns = document.querySelectorAll('.project_nav_btn');
 

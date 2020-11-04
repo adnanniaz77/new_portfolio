@@ -619,10 +619,25 @@ header {
     user-select: none;
 }
 
+.textToBeCopied {
+    display: none;
+}
+
+.copyAlert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    background: green;
+    z-index: 10;
+    padding: 1em 2em;
+    transition: opacity ease-in 0.3s;
+    opacity: 0;
+}
+
 .toolTip {
     position: absolute;
     top: 10%;
-    left: 50;
+    left: 0;
     padding: 0.5em 1em;
     background: #212121c7;
     backdrop-filter: blur(2px);
