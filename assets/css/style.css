@@ -625,8 +625,10 @@ header {
 
 .copyAlert {
     position: fixed;
-    top: 0;
-    left: 50%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
     background: green;
     z-index: 10;
     padding: 1em 2em;
