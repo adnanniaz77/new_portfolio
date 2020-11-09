@@ -201,6 +201,10 @@ header {
     transition: all ease 0.2s;
 }
 
+.floatingBtn {
+    box-sizing: border-box;
+}
+
 .main_nav a:hover,
 .main_nav a:focus,
 .active {
@@ -393,11 +397,11 @@ header {
 }
 
 .slideUp {
-    animation: slideUp 0.3s linear;
+    animation: slideUp 0.15s linear;
 }
 
 .slideDown {
-    animation: slideUp 0.3s linear;
+    animation: slideUp 0.15s linear;
 }
 
 .modal-backdrop {
@@ -558,6 +562,7 @@ header {
     align-items: center;
     background: #212121ea;
     color: #fff;
+    overflow: hidden;
 }
 
 .contact .title_large_text,
@@ -571,6 +576,11 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     margin: 2em 0;
+}
+
+.form_name {
+    display: block;
+    margin-bottom: 1em;
 }
 
 .contact_info,
@@ -724,4 +734,19 @@ footer {
     margin: 0 auto;
     text-align: center;
     padding: 1em;
+}
+
+@media (max-width: 950px) {
+    .contact_wrapper {
+        gap: 2em;
+    }
+    .contact_info,
+    .contact_form {
+        padding: 0;
+        width: 90%;
+    }
+
+    .contact_form form {
+        margin: 0;
+    }
 }

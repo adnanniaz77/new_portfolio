@@ -1,6 +1,12 @@
 const projectGallery = document.querySelector('.project_gallery')
 const project = document.querySelectorAll('.project')
 const popcornMovies = document.querySelector('#popcorn-movies-btn')
+const header = document.querySelector('header')
+const home = document.querySelector('#home')
+const about = document.querySelector('#about')
+const work = document.querySelector('#work')
+const testimonials = document.querySelector('#testimonials')
+const btns = document.querySelectorAll('.floatingBtn')
 
 popcornMovies.addEventListener('click', () => {
     document.querySelector('#popcorn-movies').style.display = 'unset'
@@ -23,7 +29,39 @@ document.addEventListener('scroll', (e) => {
         document.querySelector('.hidden_menu').style.display = 'initial'
         document.querySelector('.hidden_menu').style.transform = 'translateY(0)'
     }
+    
+    if(pageYOffset < (home.offsetTop)) {
+        changeBorder('#home')
+    }
+
+    if(pageYOffset >= (about.offsetTop)) {
+        changeBorder('#about')
+    }
+    
+    if(pageYOffset >= (work.offsetTop - 50)){
+        changeBorder('#work')
+    }
+    
+    if(pageYOffset >= (testimonials.offsetTop - 100)){
+        changeBorder('#testimonials')
+    }
+
+    if(pageYOffset >= (contact.offsetTop - 100)){
+        changeBorder('#contact')
+    }
+    
+    
 })
+
+function changeBorder(id) {
+    btns.forEach(each => {
+        if (each.hash === id) {
+            each.style.borderBottom = "solid 3px #fff102"
+        }else {
+            each.style.borderBottom = "none"
+        }
+    })
+}
 
 // Gallery Filter
 function filterSelection(selector) {
@@ -88,3 +126,23 @@ function copyToClipBoard (text) {
     }
     }
 }
+
+
+const nav_links = document.querySelectorAll('nav a')
+
+function clearOther() {
+    nav_links.forEach(each => {
+        each.style.borderBottom = "solid 3px transparent"
+    })
+}
+
+nav_links.forEach(each => {
+    each.addEventListener('click', () => {   
+        console.log(document.activeElement)
+        clearOther();     
+        if (!each.classList.contains('active')) {
+            each.style.borderBottom = "solid 3px #fff102"
+            console.log(document.activeElement)
+        } 
+    })
+})
