@@ -37,6 +37,18 @@
                 </div>
             </div>
             <div class="header_right_section">
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <nav class="responsive_menu">
+                    <a href="#home">home</a>
+                    <a href="#about">about</a>
+                    <a href="#work">work</a>
+                    <a href="#testimonials">testimonials</a>
+                    <a href="#contact">contact</a>
+                </nav>
                 <nav class="main_nav">
                     <a href="#home">home</a>
                     <a href="#about">about</a>
@@ -68,7 +80,7 @@
                     at
                     enim fugit repudiandae voluptatem est quae.
                 </p>
-                <h3>Tech i use for development</h3>
+                <h3>My tools of development</h3>
                 <ul class="tech">
                     <li>
                         <img src="./assets/images/html5.png" alt="">
@@ -144,8 +156,15 @@
                 <div class="project all front-end">
                     <img src="./assets/images/project_masks/fire-gallery.jpg" alt="">
                     <div class="project_info">
-                        <span class="project_title">Fire Gallery</span>
-                        <span class="project_tagline">html, css, js</span>
+                        <span class="project_title">PopCorn Movies</span>
+                        <i class="fa fa-search" id="fire-gallery"></i>
+                    </div>
+                </div>
+
+                 <!-- fire-gallery modal -->
+                 <div class="modal-backdrop" id="fire-gallery">
+                    <div class="project_modal">
+                        <div class="close_btn"><i class="fa fa-times"></i></div>
                         <div class="projects_links">
                             <a href="" class="project_link"><i class="fa fa-github"></i>github</a>
                             <a href="" class="project_link"><i class="fa fa-desktop"></i>demo</a>
@@ -345,7 +364,7 @@
     </footer>
 
     <!-- javascript -->
-    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/app.js" defer></script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@ const work = document.querySelector('#work')
 const testimonials = document.querySelector('#testimonials')
 const btns = document.querySelectorAll('.floatingBtn')
 
+// Modal Setting
 popcornMovies.addEventListener('click', () => {
     document.querySelector('#popcorn-movies').style.display = 'unset'
 })
@@ -53,6 +54,7 @@ document.addEventListener('scroll', (e) => {
     
 })
 
+// function to change border for hidden floating-menu
 function changeBorder(id) {
     btns.forEach(each => {
         if (each.hash === id) {
@@ -145,4 +147,13 @@ nav_links.forEach(each => {
             console.log(document.activeElement)
         } 
     })
+})
+
+
+// Responsive Menu
+const responsiveMenu = document.querySelector('.responsive_menu');
+const toggleButton = document.querySelector('.toggle-button');
+
+toggleButton.addEventListener('click', () => {
+   responsiveMenu.classList.toggle('show')
 })
