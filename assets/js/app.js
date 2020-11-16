@@ -156,4 +156,5 @@ const toggleButton = document.querySelector('.toggle-button');
 
 toggleButton.addEventListener('click', () => {
    responsiveMenu.classList.toggle('show')
+   toggleButton.classList.toggle('rotate')
 })

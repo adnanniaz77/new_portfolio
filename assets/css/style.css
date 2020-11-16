@@ -746,14 +746,26 @@ footer {
 	flex-direction: column;
 	justify-content: space-between;
 	width: 30px;
-	height: 21px;
+    height: 21px;
+    transition: transform ease-in .2s;
 }
 
 .toggle-button .bar {
 	height: 3px;
-	width: 100%;
-	background-color: #fff;
+    width: 100%;
+    transition: transform ease .3s;
+	background-color: rgb(219, 219, 219);
 	border-radius: 10px;
+}
+
+.toggle-button:hover > .bar {
+    background: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+}
+
+
+.rotate {
+    transform: rotate(90deg);
 }
 
 .responsive_menu {
