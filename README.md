@@ -6,7 +6,7 @@ A fully custom Portfolio design with responsive approach. This front-end project
 
 ## SnapShot
 
-![sd](./assets/images/projectImg.png)
+![sd](./assets/images/project_img.png)
 
 ## Focus Areas
     a.   Custom Design (from Design to deployment)
