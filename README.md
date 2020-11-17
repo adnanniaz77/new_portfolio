@@ -1,4 +1,4 @@
-# My Personal Portfolio as my First Full Custom Front-End Project
+## My Personal Portfolio as my First Full Custom Front-End Project
 ## Objective:
 A fully custom Portfolio design with responsive approach. This front-end project is completed using HTML, CSS and JavaScript.
 
