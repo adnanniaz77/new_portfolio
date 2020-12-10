@@ -85,7 +85,7 @@ header,
 header {
     min-height: 900px;
     text-transform: uppercase;
-    position: relative
+    position: relative;
 }
 
 .floating-menu {
@@ -138,6 +138,7 @@ header {
     width: 165%;
     text-align: left;
     position: absolute;
+    z-index: 10;
 }
 
 .floating_text .tagline,
